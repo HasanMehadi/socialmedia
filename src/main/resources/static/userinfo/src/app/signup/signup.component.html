@@ -1,0 +1,81 @@
+
+<div class="card bg-light">
+  <div class="card-body mx-auto">
+    <h4 class="card-title mt-3 text-center">Create Account</h4>
+    <form #signupForm="ngForm" (ngSubmit)="createAccount(signupForm)">
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+        </div>
+        <input [(ngModel)]="user.firstName" id="1" name="firstName" class="form-control" placeholder="First Name" type="text" required>
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-users"></i> </span>
+        </div>
+        <input [(ngModel)]="user.lastName" id="2" name="lastName" class="form-control" placeholder="Last Name" type="text" required>
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
+        </div>
+        <input [(ngModel)]="user.dob" id="3" name="dob" class="form-control" placeholder="Birth Date" type="date" required>
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-address-book"></i> </span>
+        </div>
+        <input [(ngModel)]="user.address" id="4" name="address" class="form-control" placeholder="Address" type="text" required>
+      </div>
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+        </div>
+        <input [(ngModel)]="user.username" (blur)="checkUserName()" id="5" name="email" class="form-control"  placeholder="User Name" type="text" required>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf='userNamesuccess == false'>
+        {{userNameMessage}}
+      </div><!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+        </div>
+        <input [(ngModel)]="user.email" (blur)="checkEmail()" id="6" name="email" class="form-control"  placeholder="Email" type="email" required>
+      </div> <!-- form-group// -->
+      <div class="alert alert-danger" role="alert" *ngIf='success==false'>
+        {{emailMessage}}
+      </div>
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+        </div>
+        <input [(ngModel)]="user.phone" id="7" name="phone" class="form-control" placeholder="Phone" type="text" required>
+      </div>
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+        <input [(ngModel)]="user.password" id="9" name="password" class="form-control" placeholder="Create password" type="password" required>
+      </div>
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+        <input [(ngModel)]="rematch" id="10" name="rematch" class="form-control" placeholder="Repeat password" type="password" (input)="matchPass(rematch)" required>
+      </div> <!-- form-group// -->
+      <div class="alert alert-danger" role="alert" *ngIf="message">
+        {{message}}
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="!notMatched">
+        Password not Matched
+      </div>
+      <div class="alert alert-success" role="alert" *ngIf="matched">
+        Password Matched
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+      </div> <!-- form-group// -->
+      <p class="text-center">Have an account? <a href="login">Log In</a> </p>
+    </form>
+  </div>
+</div>
