@@ -85,17 +85,14 @@ public class JwtTokenUtil {
 
             final Claims claims = getClaimsFromToken(token);
             if(claims != null){
-                System.out.println("claims not null");
-
                 expiration = claims.getExpiration();
 
-                System.out.println(expiration);
             }else {
-                System.out.println("claims is null");
+
                 expiration = null;
             }
         }catch (Exception ex){
-            System.out.println("expiration error");
+
             expiration = null;
         }
 

@@ -33,7 +33,8 @@ import {StatusModule} from "./status/status/status.module";
     HttpClientModule,
     NgxPaginationModule,
     StatusModule,
-    RouterModule
+    RouterModule,
+
 
 
   ],

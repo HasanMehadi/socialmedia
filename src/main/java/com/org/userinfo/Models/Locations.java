@@ -11,6 +11,8 @@ import java.io.Serializable;
 @Entity
 public class Locations implements Serializable{
 
+
+    private static final long serialVersionUID = 95917852589025229L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long location_id;
@@ -20,6 +22,10 @@ public class Locations implements Serializable{
 
     public Locations() {
 
+    }
+
+    public Locations(long location_id){
+        this.location_id=location_id;
     }
 
 

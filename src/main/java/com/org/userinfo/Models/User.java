@@ -11,6 +11,8 @@ import java.time.LocalDate;
 @Table(name = "USER")
 public class User implements Serializable{
 
+
+    private static final long serialVersionUID = -142576524823571976L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

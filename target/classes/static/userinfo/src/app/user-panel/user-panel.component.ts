@@ -1,7 +1,6 @@
 import {Component, ElementRef, HostListener, OnInit} from '@angular/core';
-import {ForgetPassword} from "../forget-password";
 import {LoginAuthService} from "../login/login-auth.service";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
 
 import {UserPanelService} from "./user-panel.service";
 
@@ -12,37 +11,25 @@ import {UserPanelService} from "./user-panel.service";
 })
 export class UserPanelComponent implements OnInit {
 
-
-  forgetPassword: any;
-
-  rematch:any;
-
-  notMatched:boolean;
-  pass:any;
-  conPass:any;
-  matched:any;
-
+  id:any;
+  status: any={};
   loginUser :any={};
+  locations:any =[];
+  upStatus:any={}
 
   constructor( private userPanelService:UserPanelService,
                private router: Router,
+               private route: ActivatedRoute,
                private loginAuthService :LoginAuthService,
-               private el: ElementRef) { }
-
-  ngOnInit() {
+               private el: ElementRef) {
     this.loginUser = JSON.parse(localStorage.getItem('currentUser'));
-
-    this.forgetPassword = new ForgetPassword();
-    this.notMatched= true;
-
   }
 
-  changePassword(){
-    this.forgetPassword.username = this.loginUser.username;
-    this.forgetPassword.token = this.loginUser.token;
-    this.userPanelService.changePasswordToNew(this.loginUser.token, this.forgetPassword).subscribe((respone)=>{
-      console.log(respone);
-    });
+  ngOnInit() {
+    this.status= {};
+    this.id = this.route.snapshot.params.id;
+    this.getStatusById(this.id);
+    this.getAllLocation();
   }
 
   @HostListener('submit', ['$event'])
@@ -51,28 +38,45 @@ export class UserPanelComponent implements OnInit {
     if (invalidElements.length > 0) {
       invalidElements[1].focus();
     } else {
-//console();
+
     }
   }
 
-  matchPass(confirmPassword) {
+  getStatusById(id:any){
+    this.userPanelService.getStatusById(this.loginUser.token, id).subscribe((userStatus)=>{
 
-    this.pass = this.forgetPassword.newPassword;
-    this.conPass = this.rematch;
+      this.upStatus= userStatus;
+      this.status ={
+        id :this.upStatus.id,
+        statuses:this.upStatus.statuses,
+        location:this.upStatus.location.location_id,
+        enabled: this.upStatus.enabled
+      };
 
 
-    if(this.forgetPassword.newPassword != null && this.pass != null){
-      if (!confirmPassword) {
-        this.notMatched = true;
-      } else {
-        if (this.pass != this.conPass) {
-          this.notMatched = false;
-          this.matched= false;
-        } else {
-          this.notMatched = true;
-          this.matched=true;
-        }
+    })
+  }
+
+  getAllLocation() {
+    this.userPanelService.getLocations().subscribe((locations) => {
+
+      this.locations = locations;
+    })
+  }
+
+  updateStatus(){
+    this.status.user = this.loginUser.id;
+
+    console.log(this.status);
+    /*this.userPanelService.saveStatus(this.loginUser.token, this.status).subscribe((response)=>{
+      if(response != null){
+        this.ngOnInit();
       }
-    }
-  };
+    })*/
+  }
+
+  cancelUpdate(){
+    this.router.navigate(['status'])
+  }
+
 }

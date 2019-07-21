@@ -62,4 +62,31 @@ public class StatusController {
     }
 
 
+    @GetMapping(value = "id")
+    public ResponseEntity<Status> getStatusById(@RequestParam("id") long id){
+
+        try{
+
+            return new ResponseEntity<>(statusService.getStatusById(id), HttpStatus.OK);
+
+        }catch (Exception ex){
+            System.out.println(ex.getCause().getMessage());
+            return ResponseEntity.noContent().header(HttpStatus.UNAVAILABLE_FOR_LEGAL_REASONS.getReasonPhrase(),HttpStatus.UNAVAILABLE_FOR_LEGAL_REASONS.getReasonPhrase()).build();
+        }
+
+    }
+
+    @PutMapping(value = "update")
+    public ResponseEntity<Response> updateStatus(@RequestBody StatusDTO statusDTO){
+
+        try{
+
+            statusService.updateStatus(ModelEntityConversionUtil.convert(statusDTO,Status.class));
+            return new ResponseEntity<>(new Response("true"),HttpStatus.OK);
+        }catch (Exception ex){
+            System.out.println(ex.getCause().getMessage());
+            return ResponseEntity.noContent().header(HttpStatus.UNAVAILABLE_FOR_LEGAL_REASONS.getReasonPhrase(),HttpStatus.UNAVAILABLE_FOR_LEGAL_REASONS.getReasonPhrase()).build();
+        }
+    }
+
 }

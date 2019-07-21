@@ -39,8 +39,9 @@ export class SignupComponent implements OnInit {
 
     this.user =new User();
 
+    this.loginUser= {};
     this.loginUser = JSON.parse(localStorage.getItem('currentUser'));
-    if(this.loginUser.token != null){
+    if(this.loginUser != null){
       this.router.navigate(['status']);
     }
 
@@ -85,27 +86,13 @@ export class SignupComponent implements OnInit {
 
 
   createAccount( signupForm: any){
-
-    console.log('create accout called');
-
-    console.log('matched' + this.matched);
-    console.log('notMatched' + this.notMatched);
-    console.log('success' + this.success);
-    console.log('userNamesuccess' + this.userNamesuccess);
-
-    console.log(this.user);
-
     if(this.matched && this.notMatched && this.success && this.userNamesuccess == true){
-
       this.user.role='ADMIN';
-
       this.signupService.saveUser(this.user).subscribe((response)=>{
         if(response){
-
           signupForm.reset();
           this.router.navigate(['login']);
         }
-
       },error => {
         console.log(error)
       })
@@ -114,14 +101,11 @@ export class SignupComponent implements OnInit {
 
   checkEmail(){
     this.success=null;
-
     let pattern = new RegExp("[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}");
-
     if(this.user.email == null){
       this.success = true;
     }else{
       if (("" + pattern.test(this.user.email)) == 'false'){
-
         this.success = false;
         this.emailMessage = "Invalid Email Address";
       }
@@ -134,23 +118,17 @@ export class SignupComponent implements OnInit {
         })
       }
     }
-
-
   }
 
   checkUserName() {
     this.success = null;
     this.signupService.checkUserName(this.user.username).subscribe((response) => {
-      console.log(response);
       if (response.message==='false') {
         this.userNamesuccess = false;
-        console.log(this.userNamesuccess);
         this.userNameMessage = "Username Already Used";
       }else {
         this.userNamesuccess=true;
       }
     })
-
   }
-
 }

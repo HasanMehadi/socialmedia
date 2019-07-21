@@ -46,7 +46,7 @@
                 </div>
                 <select [(ngModel)]="status.location" id="location" name="location" required>
 
-                  <option *ngFor="let location of locations" [ngValue]="location.id">
+                  <option *ngFor="let location of locations" [ngValue]="location.location_id">
                     {{location.location}}
                   </option>
                 </select>
@@ -56,7 +56,6 @@
               <input type="submit" value="Add Status" class="btn btn-info btn-block rounded-0 py-2">
             </div>
           </div>
-
         </div>
       </form>
       <!--Form with header-->
@@ -119,7 +118,8 @@
                 </tr>
                 <tr>
                   <th><i class="fa fa-pencil text-info"></i></th>
-                  <td>{{status.statuses}}</td>
+                  <td><a (click)="editStatus(status.id)" title="Edit">{{status.statuses}}</a></td>
+
                 </tr><tr>
                   <th><i class="fa fa-map-marker text-info"></i></th>
                   <td>{{status.location.location}}</td>

@@ -40,6 +40,7 @@ export class AppComponent implements OnInit{
     localStorage.removeItem('currentUser');
     this.check=true;
     this.router.navigate(['']);
+    this.ngOnInit()
   }
 
   logIn(){

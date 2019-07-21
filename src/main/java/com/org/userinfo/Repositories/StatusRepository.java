@@ -13,5 +13,6 @@ public interface StatusRepository extends JpaRepository<Status,Long>{
 
      List<Status> findByUser_id(long id);
 
+     Status getById(long id);
 
 }

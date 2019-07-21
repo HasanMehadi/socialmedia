@@ -49,8 +49,6 @@ export class DashBoardComponent implements OnInit {
 
     this.allStatus= [];
     this.statusService.getStatusByShow(true).subscribe((allStatus)=>{
-      console.log('called get user');
-      console.log(allStatus);
       this.allStatus= allStatus;
     });
   }

@@ -11,4 +11,8 @@ public interface StatusService {
     public List<Status> getStatusByUser(long id);
 
     public boolean saveStatus(Status status);
+
+    public Status getStatusById(long id);
+
+    public boolean updateStatus(Status status);
 }

@@ -19,9 +19,6 @@ export class StatusComponent implements OnInit {
   allStatus:any=[];
   userStatus:any=[];
 
-
-
-
   constructor(private statusService: StatusService,
               private loginAuthService: LoginAuthService,
               private router: Router,
@@ -39,7 +36,6 @@ export class StatusComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.status= {};
     this.locations=[];
     this.getStatusByUser();
@@ -48,42 +44,34 @@ export class StatusComponent implements OnInit {
   }
 
   getAllLocation() {
-
-    console.log('Get all Location Called');
-
     this.statusService.getLocations().subscribe((locations) => {
-      console.log(locations);
       this.locations = locations;
-
     })
   }
 
   saveStatus(){
-
     this.status.user = this.loginUser.id;
-    console.log(this.status);
-
-    console.log(this.loginUser.token);
-
     this.statusService.saveStatus(this.loginUser.token, this.status).subscribe((response)=>{
-      console.log(response);
+      if(response != null){
+        this.ngOnInit();
+      }
     })
   }
 
   getStatus(){
-
     this.allStatus= [];
     this.statusService.getStatusByShow(true).subscribe((allStatus)=>{
-
       this.allStatus= allStatus;
     })
   }
 
   getStatusByUser(){
-
     this.statusService.getStatusByUser(this.loginUser.token, this.loginUser.id).subscribe((userStatus)=>{
       this.userStatus= userStatus;
     })
   }
 
+  editStatus(id) {
+    this.router.navigate(['edit', id]);
+  }
 }

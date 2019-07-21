@@ -7,6 +7,8 @@ import java.io.Serializable;
 @Entity
 public class Status implements Serializable{
 
+
+    private static final long serialVersionUID = -7252831764959280047L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -17,14 +19,14 @@ public class Status implements Serializable{
     @NotNull
     private boolean enabled;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(foreignKey = @ForeignKey(name = "location"))
+    @OneToOne(targetEntity = Locations.class)
+    @JoinColumn(name = "location")
     @NotNull
     private Locations location;
 
     @NotNull
-    @ManyToOne()
-    @JoinColumn(foreignKey = @ForeignKey(name = "user"))
+    @ManyToOne(targetEntity = User.class)
+    @JoinColumn(name = "user")
     private User user;
 
     public Status() {
