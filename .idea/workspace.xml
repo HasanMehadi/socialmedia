@@ -1,53 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d86a2da7-a6e9-49a1-8d5c-497e814d5057" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Configurations/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Configurations/JwtTokenUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Configurations/JwtUserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Configurations/JwtUserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Controllers/Status/StatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Controllers/Status/StatusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Controllers/User/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Controllers/User/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Models/Locations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Models/Locations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Models/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Models/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Repositories/StatusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Repositories/StatusRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Services/StatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Services/StatusService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Services/StatusServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Services/StatusServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/org/userinfo/Services/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/dash-board/dash-board.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/dash-board/dash-board.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/signup/signup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/signup/signup.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/status/status.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/status/status.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/status/status.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/status/status.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/user-panel/user-panel.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/user-panel/user-panel.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/user-panel/user-panel.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/user-panel/user-panel.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/user-panel/user-panel.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/user-panel/user-panel.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/org/userinfo/Configurations/JwtTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/org/userinfo/Configurations/JwtTokenUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/org/userinfo/Configurations/JwtUserFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/org/userinfo/Configurations/JwtUserFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/org/userinfo/Controllers/Status/StatusController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/org/userinfo/Controllers/Status/StatusController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/org/userinfo/Controllers/User/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/org/userinfo/Controllers/User/AuthenticationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/org/userinfo/Models/Locations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/org/userinfo/Models/Locations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/org/userinfo/Models/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/org/userinfo/Models/Status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/org/userinfo/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/org/userinfo/Models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/org/userinfo/Repositories/StatusRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/org/userinfo/Repositories/StatusRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/org/userinfo/Services/StatusService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/org/userinfo/Services/StatusService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/org/userinfo/Services/StatusServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/org/userinfo/Services/StatusServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/org/userinfo/Services/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/org/userinfo/Services/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/dash-board/dash-board.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/dash-board/dash-board.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/signup/signup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/signup/signup.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/status/status.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/status/status.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/status/status.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/status/status.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/user-panel/user-panel.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/user-panel/user-panel.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/user-panel/user-panel.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/user-panel/user-panel.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/user-panel/user-panel.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/userinfo/src/app/user-panel/user-panel.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userinfo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/userinfo.iml" afterDir="false" />
-    </list>
+    <list default="true" id="d86a2da7-a6e9-49a1-8d5c-497e814d5057" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/user-panel/user-panel.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="392">
+              <caret line="69" column="41" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
               </folding>
@@ -359,7 +313,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563699393807" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563702856441" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/smartcrowd/sc" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -428,12 +382,12 @@
       <workItem from="1563628466720" duration="1112000" />
       <workItem from="1563637621052" duration="2270000" />
       <workItem from="1563640759139" duration="2890000" />
-      <workItem from="1563681290153" duration="15456000" />
+      <workItem from="1563681290153" duration="17378000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120599000" />
+    <option name="totallyTimeSpent" value="122521000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -446,9 +400,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21778488" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21778488" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -460,12 +413,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32934782" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2867647" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.31092438" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31092438" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32934782" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32878152" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.29411766" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29411766" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
@@ -925,8 +878,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/userinfo/src/app/user-panel/user-panel.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="392">
+          <caret line="69" column="41" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
           </folding>
