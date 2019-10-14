@@ -13,9 +13,10 @@ export class UserPanelComponent implements OnInit {
 
   id:any;
   status: any={};
+  status2: any={};
   loginUser :any={};
   locations:any =[];
-  upStatus:any={}
+  upStatus:any={};
 
   constructor( private userPanelService:UserPanelService,
                private router: Router,
@@ -53,6 +54,7 @@ export class UserPanelComponent implements OnInit {
         enabled: this.upStatus.enabled
       };
 
+      this.status2 = this.status;
 
     })
   }
@@ -66,13 +68,19 @@ export class UserPanelComponent implements OnInit {
 
   updateStatus(){
     this.status.user = this.loginUser.id;
+    if(this.status.id == this.status2.id &&
+      this.status.statuses == this.status2.statuses &&
+      this.status.enabled ==this.status2.enabled &&
+      this.status.location == this.status2.location){
 
-    console.log(this.status);
-    /*this.userPanelService.saveStatus(this.loginUser.token, this.status).subscribe((response)=>{
-      if(response != null){
-        this.ngOnInit();
-      }
-    })*/
+      console.log("nothing has changed");
+    }else {
+      this.userPanelService.saveStatus(this.loginUser.token, this.status).subscribe((response)=>{
+        if(response != null){
+          this.ngOnInit();
+        }
+      })
+    }
   }
 
   cancelUpdate(){
