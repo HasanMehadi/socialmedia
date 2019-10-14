@@ -10,7 +10,7 @@ import {LoginAuthService} from "./login/login-auth.service";
 })
 export class AppComponent implements OnInit{
 
-  title = 'USERINFO';
+  title = 'Social Media';
 
   check: boolean;
   loginUser: any = {};
